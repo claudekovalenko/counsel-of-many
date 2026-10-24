@@ -87,7 +87,10 @@ section { padding-block: 64px; border-top: 1px solid var(--line); }
 .intro { max-width: 62ch; margin: 16px 0 0; }
 
 /* Scripture */
-.verses { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 40px; }
+.keyverse { margin: 44px 0 0; padding-left: clamp(16px, 4vw, 40px); border-left: 4px solid var(--brass); }
+.keyverse blockquote { border: 0; padding: 0; }
+.keyverse blockquote p { font: 400 clamp(1.8rem, 4.6vw, 3.2rem)/1.15 var(--body); letter-spacing: -0.01em; max-width: 22ch; text-wrap: balance; margin: 0 0 16px; }
+.verses { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 44px; }
 .verses > * { min-width: 0; }
 blockquote { margin: 0; padding-top: 18px; border-top: 2px solid var(--accent); }
 blockquote p { font-size: 1.25rem; line-height: 1.45; margin: 0 0 12px; }
@@ -171,11 +174,12 @@ textarea { min-height: 110px; resize: vertical; }
 
 footer { border-top: 1px solid var(--line); padding-block: 40px 48px; display: grid; gap: 20px; }
 footer .closing { font: italic 400 1.3rem/1.45 var(--body); max-width: 40ch; margin: 0; }
+footer .copyright { margin: 0; text-transform: none; letter-spacing: 0.02em; max-width: 80ch; }
 footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
 @media (max-width: 900px) {
   .formats { grid-template-columns: repeat(2, 1fr); }
-  .verses { grid-template-columns: 1fr; gap: 24px; }
+  .verses { grid-template-columns: 1fr; gap: 24px; margin-top: 32px; }
 }
 @media (max-width: 820px) {
   .hero, .posture, .chair, .pair { grid-template-columns: 1fr; gap: 32px; }
@@ -235,18 +239,20 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
     <p class="label">The name</p>
     <h2>Wisdom comes through many counselors</h2>
     <p class="intro">Counsel, not council. The name is about advice and guidance, not a committee. It comes from a thread that runs through Proverbs: plans and lives hold up better when they are shaped by many wise voices.</p>
+    <figure class="keyverse">
+      <blockquote>
+        <p>“Plans fail for lack of counsel, but with many advisers they succeed.”</p>
+      </blockquote>
+      <figcaption class="label">Proverbs 15:22 · NIV 1984</figcaption>
+    </figure>
     <div class="verses">
       <blockquote>
-        <p>“Where no counsel is, the people fall: but in the multitude of counsellors there is safety.”</p>
-        <cite class="label">Proverbs 11:14 · KJV</cite>
+        <p>“For lack of guidance a nation falls, but many advisers make victory sure.”</p>
+        <cite class="label">Proverbs 11:14 · NIV 1984</cite>
       </blockquote>
       <blockquote>
-        <p>“Without counsel purposes are disappointed: but in the multitude of counsellors they are established.”</p>
-        <cite class="label">Proverbs 15:22 · KJV</cite>
-      </blockquote>
-      <blockquote>
-        <p>“For by wise counsel thou shalt make thy war: and in multitude of counsellors there is safety.”</p>
-        <cite class="label">Proverbs 24:6 · KJV</cite>
+        <p>“For waging war you need guidance, and for victory many advisers.”</p>
+        <cite class="label">Proverbs 24:6 · NIV 1984</cite>
       </blockquote>
     </div>
   </section>
@@ -265,7 +271,7 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
         <span class="label">The purpose</span>
         <h3>Well Done</h3>
         <p>Live a life of faithfulness to Jesus Christ, and aim for the only review that finally matters.</p>
-        <p class="verse">“Well done, good and faithful servant.” Matthew 25:21</p>
+        <p class="verse">“Well done, good and faithful servant!” Matthew 25:21</p>
       </div>
     </div>
     <p class="motto">Seek counsel from many, discern what is true, and live for the ultimate <em>“Well done.”</em></p>
@@ -400,6 +406,7 @@ footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wra
       <span class="label">© 2026 Counsel of Many</span>
       <span class="label">Formerly Well Done on Spotify</span>
     </div>
+    <p class="label copyright">Scripture quotations taken from the Holy Bible, New International Version®, NIV®. Copyright © 1973, 1978, 1984 by Biblica, Inc.™ Used by permission. All rights reserved worldwide.</p>
   </footer>
 </div>
 
